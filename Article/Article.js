@@ -85,6 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Adding an article of my own',
+    date: 'Jan 1st, 2019',
+    firstParagraph: `Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better `,
+
+    secondParagraph: `Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending `,
+
+    thirdParagraph: `Ghost is a good boy`
+  },
+  {
+    title: 'Adding an ANOTHER article of my own',
+    date: 'Jan 1st, 2020',
+    firstParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!`,
+
+    secondParagraph: `Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending `,
+
+    thirdParagraph: `Ghost is a good boy`
   }
 ];
 

@@ -45,19 +45,16 @@ let menuItems = [
     //create all elements
     const menu = document.createElement('div');
     const list = document.createElement('ul');
-    let listItem = document.createElement('li');
-
+    
     //create structure
     menu.appendChild(list);
-    list.appendChild(listItem);
     
-    //set the content
-    menuItems.forEach(() => {
-      for (let item of menuItems) {
-        let listItem = document.createElement('li');
-        listItem.textContent = "item";
-      }
-    });
+    //set the content of menu items by creating a new li, appending it to the list and setting txt cont to each iteration of the array
+    menuItems.forEach((arr) => {
+      let listItem = document.createElement('li');
+      list.appendChild(listItem);
+      listItem.textContent = arr;
+    })
 
     //apply style classes
     menu.classList.add('menu');
