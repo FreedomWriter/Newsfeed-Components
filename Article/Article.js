@@ -140,6 +140,7 @@ const data = [
    const p2 = document.createElement('p');
    const p3 = document.createElement('p');
    const expand = document.createElement('span');
+   const button = document.createElement('button');
 
    //create structure
    article.appendChild(title);
@@ -148,6 +149,7 @@ const data = [
    article.appendChild(p2);
    article.appendChild(p3);
    article.appendChild(expand);
+   expand.appendChild(button);
 
    //set the content
    title.textContent = artInfo.title;
@@ -155,17 +157,25 @@ const data = [
    p1.textContent = artInfo.firstParagraph;
    p2.textContent = artInfo.secondParagraph;
    p3.textContent = artInfo.thirdParagraph;
+   button.textContent = 'Read';
 
    //apply styling classes
   article.classList.add('article');
   date.classList.add('date');
   expand.classList.add('expandButton');
-
+  expand.style.top = '20px';
+  expand.style.left = '95%';
+  
   //add event listener to span
-  article.addEventListener('click', (e) => {
+  button.addEventListener('click', (e) => {
     article.classList.toggle('article-open');
+    if (expand.textContent === 'Read') {
+      button.textContent = 'Close';
+    } else if (expand.textContent === 'Close') {
+      button.textContent = 'Read';
+    }
   });
-  console.log(expand);
+  console.log(document.querySelector('.expandButton'));
   return article;
  }
 let articles = document.querySelector('.articles');
