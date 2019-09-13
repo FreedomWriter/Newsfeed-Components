@@ -166,7 +166,7 @@ const data = [
   expand.style.top = '20px';
   expand.style.left = '95%';
   
-  //add event listener to span
+  //add event listener to span, add button (stretch)
   button.addEventListener('click', (e) => {
     article.classList.toggle('article-open');
     if (expand.textContent === 'Read') {
@@ -175,11 +175,10 @@ const data = [
       button.textContent = 'Read';
     }
   });
-  console.log(document.querySelector('.expandButton'));
   return article;
  }
-let articles = document.querySelector('.articles');
-// console.log(article);
+const articles = document.querySelector('.articles');
+
  data.forEach(artInfo => {
    articles.appendChild(createArticle(artInfo));
  });

@@ -33,13 +33,6 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
-{/* <div class="menu">
-    <ul>
-      {each menu item as a list item}
-    </ul>
-  </div> */}
-
-  
 
   function createMenu(arr) {
     //create all elements
@@ -54,7 +47,7 @@ let menuItems = [
       let listItem = document.createElement('li');
       list.appendChild(listItem);
       listItem.textContent = arr;
-    })
+    });
 
     //apply style classes
     menu.classList.add('menu');
