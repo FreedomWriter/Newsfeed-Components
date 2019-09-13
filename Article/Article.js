@@ -85,6 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Adding an article of my own',
+    date: 'Jan 1st, 2019',
+    firstParagraph: `Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better Hodor deserved better `,
+
+    secondParagraph: `Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending `,
+
+    thirdParagraph: `Ghost is a good boy`
+  },
+  {
+    title: 'Adding an ANOTHER article of my own',
+    date: 'Jan 1st, 2020',
+    firstParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!`,
+
+    secondParagraph: `Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending Grey Worm was never going to get a happy ending `,
+
+    thirdParagraph: `Ghost is a good boy`
   }
 ];
 
@@ -112,3 +130,55 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+ function createArticle(artInfo) {
+   //create all elements
+   const article = document.createElement('div');
+   const title = document.createElement('h2');
+   const date = document.createElement('p');
+   const p1 = document.createElement('p');
+   const p2 = document.createElement('p');
+   const p3 = document.createElement('p');
+   const expand = document.createElement('span');
+   const button = document.createElement('button');
+
+   //create structure
+   article.appendChild(title);
+   article.appendChild(date);
+   article.appendChild(p1);
+   article.appendChild(p2);
+   article.appendChild(p3);
+   article.appendChild(expand);
+   expand.appendChild(button);
+
+   //set the content
+   title.textContent = artInfo.title;
+   date.textContent = artInfo.date;
+   p1.textContent = artInfo.firstParagraph;
+   p2.textContent = artInfo.secondParagraph;
+   p3.textContent = artInfo.thirdParagraph;
+   button.textContent = 'Read';
+
+   //apply styling classes
+  article.classList.add('article');
+  date.classList.add('date');
+  expand.classList.add('expandButton');
+  expand.style.top = '20px';
+  expand.style.left = '95%';
+  
+  //add event listener to span, add button (stretch)
+  button.addEventListener('click', (e) => {
+    article.classList.toggle('article-open');
+    if (expand.textContent === 'Read') {
+      button.textContent = 'Close';
+    } else if (expand.textContent === 'Close') {
+      button.textContent = 'Read';
+    }
+  });
+  return article;
+ }
+const articles = document.querySelector('.articles');
+
+ data.forEach(artInfo => {
+   articles.appendChild(createArticle(artInfo));
+ });
