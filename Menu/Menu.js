@@ -1,12 +1,12 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
-  'Faculty',
+  "Students",
+  "Faculty",
   "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
+  "Tech Trends",
+  "Music",
+  "Log Out"
 ];
 
 /* 
@@ -34,34 +34,32 @@ let menuItems = [
   
 */
 
-  function createMenu(arr) {
-    //create all elements
-    const menu = document.createElement('div');
-    const list = document.createElement('ul');
-    
-    //create structure
-    menu.appendChild(list);
-    
-    //set the content of menu items by creating a new li, appending it to the list and setting txt cont to each iteration of the array
-    menuItems.forEach((arr) => {
-      let listItem = document.createElement('li');
-      list.appendChild(listItem);
-      listItem.textContent = arr;
-    });
+function createMenu(arr) {
+  //create all elements
+  const menu = document.createElement("div");
+  const list = document.createElement("ul");
 
-    //apply style classes
-    menu.classList.add('menu');
+  //create structure
+  menu.appendChild(list);
 
-    //apply event listener
-    let menuBttn = document.querySelector('.menu-button');
-    menuBttn.addEventListener('click', () => {
-      menu.classList.toggle('menu--open');
-    });
-    return menu;
-  }
-
-  const header = document.querySelector('.header');
-
-  menuItems.forEach(data => {
-    header.appendChild(createMenu(data));
+  //set the content of menu items by creating a new li, appending it to the list and setting txt cont to each iteration of the array
+  arr.forEach(arr => {
+    let listItem = document.createElement("li");
+    list.appendChild(listItem);
+    listItem.textContent = arr;
   });
+
+  //apply style classes
+  menu.classList.add("menu");
+
+  //apply event listener
+  let menuBttn = document.querySelector(".menu-button");
+  menuBttn.addEventListener("click", () => {
+    menu.classList.toggle("menu--open");
+  });
+  return menu;
+}
+
+const header = document.querySelector(".header");
+
+header.appendChild(createMenu(menuItems));
